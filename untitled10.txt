@@ -1,0 +1,88 @@
+1. What is the role of try and exception block?
+The try and except blocks in Python are used for exception handling. The code inside the try block is executed, and if an exception occurs during its execution, the control is transferred to the except block, where the exception can be caught and handled.
+
+2. What is the syntax for a basic try-except block?
+try:
+    # Code that may raise an exception
+    # ...
+except ExceptionType as e:
+    # Code to handle the exception
+    # ...
+
+3. What happens if an exception occurs inside a try block and there is no matching except block?
+If an exception occurs inside a try block and there is no matching except block, the program will terminate, and an unhandled exception message will be displayed.
+
+4. What is the difference between using a bare except block and specifying a specific exception type?
+ Using a bare except block (except:) catches all exceptions, but it is generally not recommended because it makes it difficult to identify and debug specific issues. Specifying a specific exception type allows you to handle different exceptions differently.
+ 
+5. Can you have nested try-except blocks in Python? If yes, then give an example.
+try:
+    # Outer try block
+    try:
+        # Inner try block
+        # ...
+    except InnerException:
+        # Handle inner exception
+        # ...
+except OuterException:
+    # Handle outer exception
+    # ...
+
+6. Can we use multiple exception blocks, if yes then give an example.
+try:
+    # Code that may raise exceptions
+except ValueError as ve:
+    # Handle ValueError
+except TypeError as te:
+    # Handle TypeError
+except Exception as e:
+    # Handle other exceptions
+
+7. Write the reason due to which following errors are raised:
+  Reasons for the following errors:
+a. EOFError: Raised when the end of a file is encountered unexpectedly.
+b. FloatingPointError: Raised when a floating-point operation fails, such as division by zero or an operation resulting in an undefined                           value.
+c. IndexError: Raised when trying to access an index that is outside the bounds of a list, tuple, or string.
+d. MemoryError: Raised when an operation runs out of memory.
+e. OverflowError: Raised when an arithmetic operation exceeds the limits of the data type.
+f. TabError: Raised when indentation contains inconsistent tabs and spaces.
+g. ValueError: Raised when a function receives an argument of the correct type but with an invalid value.
+
+8. Write code for the following given scenario and add try-exception block to it.
+a. Program to divide two numbers
+try:
+    result = 10 / 0
+except ZeroDivisionError:
+    print("Cannot divide by zero!")
+    
+b. Program to convert a string to an integer
+try:
+    num = int("abc")
+except ValueError:
+    print("Invalid conversion to integer!")
+    
+c. Program to access an element in a list
+my_list = [1, 2, 3]
+try:
+    value = my_list[5]
+except IndexError:
+    print("Index out of range!")
+    
+d. Program to handle a specific exception
+
+
+try:
+    # Some code that may raise a specific exception
+except SpecificException as se:
+    print(f"Caught a specific exception: {se}")
+    
+e. Program to handle any exception
+try:
+    # Some code that may raise any exception
+except Exception as e:
+    print(f"Caught an exception: {e}")
+
+
+
+
+
